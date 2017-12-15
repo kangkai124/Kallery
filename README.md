@@ -1,6 +1,7 @@
 # kk-gallery
 
 > Kallery is a web gallery based on vue
+>
 > Kallery 是一个基于 vue 开发的网页相册
 
 ## 12.15 更新
@@ -9,7 +10,6 @@
 
 ### 移动端
 ![移动端](./views/mobile-view.jpg)
-## Build Setup
 
 ## 使用
 ``` bash
@@ -34,5 +34,5 @@ yarn test
 ## 下一步
 - 完成 PC 端音乐盒
 - 引入 fancyBox
-- 图片懒加载
+- 图片懒加载
 - 播放音乐
