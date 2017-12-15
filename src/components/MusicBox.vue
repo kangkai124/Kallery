@@ -43,31 +43,34 @@ import Hammer from "hammerjs"
 import cover from "../assets/cover.jpg"
 
 export default {
-	name: "music-box",
-	data() {
-		return {
-			voice: 50,
-			coverImage: cover,
+  name: "music-box",
+  data() {
+    return {
+      voice: 50,
+      coverImage: cover,
 
-		}
-	},
-	mounted() {
-		const music = document.querySelector("#music-box")
-		const hammer = new Hammer(music)
-		const vm = this
-		// music所在的父容器fixed定位，但是下面的页面是有滚动条的
-		// 所以在music页面上操作时，需要禁止默认行为，即不触发下面页面的行为
-		music.addEventListener("touchmove", function (e) {
-			e.stopPropagation()
-			e.preventDefault()
-		})
-		// 向右滑隐藏音乐盒
-		hammer.on("swipe", function (ev) {
-			if (ev.velocityX > 0) {
-				vm.$emit("hideMusic")
-			}
-		})
-	}
+    }
+  },
+  mounted() {
+    const music = document.querySelector("#music-box")
+    const hammer = new Hammer(music)
+    const vm = this
+    // music所在的父容器fixed定位，但是下面的页面是有滚动条的
+    // 所以在music页面上操作时，需要禁止默认行为，即不触发下面页面的行为
+    music.addEventListener("touchmove", function (e) {
+      e.stopPropagation()
+      e.preventDefault()
+    })
+    // 向右滑隐藏音乐盒
+    hammer.on("swipe", function (ev) {
+      if (ev.velocityX > 0) {
+        vm.$emit("hideMusic")
+      }
+    })
+    const rangeThumb = music.querySelector(".mt-range-thumb")
+    rangeThumb.style.width = "20px"
+    rangeThumb.style.height = "20px"
+  }
 }
 </script>
 <style lang="less" scoped>

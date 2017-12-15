@@ -1,27 +1,38 @@
 # kk-gallery
 
-> a gallery project based on vue
+> Kallery is a web gallery based on vue
+> Kallery 是一个基于 vue 开发的网页相册
 
+## 12.15 更新
+### PC端
+![PC端](./views/pc-view.jpg)
+
+### 移动端
+![移动端](./views/mobile-view.jpg)
 ## Build Setup
 
+## 使用
 ``` bash
-# install dependencies
-npm install
+yarn install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Kallery running at localhost:6066
+yarn run dev
 
 # build for production with minification
-npm run build
+yarn run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
+yarn run build --report
 
 # run unit tests
-npm run unit
+yarn run unit
 
 # run all tests
-npm test
+yarn test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 下一步
+- 完成 PC 端音乐盒
+- 引入 fancyBox
+- 图片懒加载
+- 播放音乐
